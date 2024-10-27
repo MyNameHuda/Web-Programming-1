@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warung Sembako Imron</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Warung Sembako Imron</div>
+    </header>
+
+    <main>
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Cari barang..." onkeyup="filterProducts()">
+        </div>
+
+        <section id="products">
+            <h2 style="display: flex; justify-content: center; align-items: center; font-size: 20px;">Daftar Barang</h2>
+            <div class="product-grid" id="productGrid">
+                <div class="product-card">
+                    <h3>Gula Pasir</h3>
+                    <p>Harga: Rp 12.000</p>
+                    <button onclick="addToCart('Gula Pasir', 12000)">Tambah ke Keranjang</button>
+                </div>
+                <div class="product-card">
+                    <h3>Minyak Goreng</h3>
+                    <p>Harga: Rp 14.000</p>
+                    <button onclick="addToCart('Minyak Goreng', 14000)">Tambah ke Keranjang</button>
+                </div>
+                <div class="product-card">
+                    <h3>Beras</h3>
+                    <p>Harga: Rp 10.000</p>
+                    <button onclick="addToCart('Beras', 10000)">Tambah ke Keranjang</button>
+                </div>
+                <div class="product-card">
+                    <h3>Telur</h3>
+                    <p>Harga: Rp 18.000</p>
+                    <button onclick="addToCart('Telur', 18000)">Tambah ke Keranjang</button>
+                </div>
+                <div class="product-card">
+                    <h3>Mie Instan</h3>
+                    <p>Harga: Rp 15.000</p>
+                    <button onclick="addToCart('Mie Instan', 15000)">Tambah ke Keranjang</button>
+                </div>
+            </div>
+        </section>
+
+        <div class="cart">
+            <h4>Keranjang</h4>
+            <ul class="cart-items" id="cartItems"></ul>
+            <div class="total-price" id="totalPrice">Total: Rp 0</div>
+            <button class="checkout" onclick="checkout()">Pembayaran</button>
+            <button class="checkout" onclick="clearCart()">Hapus Semua</button>
+        </div>
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>
